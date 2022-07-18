@@ -60,9 +60,11 @@ class SettingTableViewController: UITableViewController {
     }
     // 2. 셀의 디자인과 데이터(필수) : cellForRowAt
     //ex. 카톡 이름, 프로필 사진, 상태 메세지 등
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")!
+        
         
         if indexPath.section == 0 {
             cell.textLabel?.text = birthdayFriends[indexPath.row]
@@ -77,9 +79,6 @@ class SettingTableViewController: UITableViewController {
             cell.textLabel?.textColor = .brown
             cell.textLabel?.font = .boldSystemFont(ofSize: 25)
         }
-        
-        
-        
         
         return cell
     }
