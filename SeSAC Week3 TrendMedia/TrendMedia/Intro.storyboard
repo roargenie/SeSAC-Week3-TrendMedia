@@ -15,7 +15,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCo-pS-2v1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347" y="-26"/>
+            <point key="canvasLocation" x="963" y="-121"/>
         </scene>
         <!--Trend-->
         <scene sceneID="WLV-SU-KkO">
@@ -35,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBj-vn-UGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="346" y="-130"/>
+            <point key="canvasLocation" x="562" y="-362"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oba-mt-jsH">
@@ -73,7 +73,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZa-eQ-7do" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="368" y="423"/>
+            <point key="canvasLocation" x="612" y="415"/>
         </scene>
     </scenes>
 </document>
