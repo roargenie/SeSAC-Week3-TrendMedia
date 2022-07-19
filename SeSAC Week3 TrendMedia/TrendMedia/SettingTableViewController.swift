@@ -63,29 +63,45 @@ class SettingTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")!
-        
-        
-        if indexPath.section == 0 {
-            cell.textLabel?.text = birthdayFriends[indexPath.row]
-            cell.textLabel?.textColor = .green
-            cell.textLabel?.font = .boldSystemFont(ofSize: 15)
-        } else if indexPath.section == 1 {
-            cell.textLabel?.text = "1번 인덱스 텍스트"
-            cell.textLabel?.textColor = .yellow
-            cell.textLabel?.font = .boldSystemFont(ofSize: 20)
-        } else {
+        if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "rightDetailCell")!
+            
             cell.textLabel?.text = "2번 인덱스 텍스트"
             cell.textLabel?.textColor = .brown
             cell.textLabel?.font = .boldSystemFont(ofSize: 25)
+            cell.detailTextLabel?.text = "Detail Label"
+            cell.imageView?.image = UIImage(systemName: "star.fill")
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell")!
+            
+            if indexPath.section == 0 {
+                cell.textLabel?.text = birthdayFriends[indexPath.row]
+                cell.textLabel?.textColor = .green
+                cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+            } else if indexPath.section == 1 {
+                cell.textLabel?.text = "1번 인덱스 텍스트"
+                cell.textLabel?.textColor = .yellow
+                cell.textLabel?.font = .boldSystemFont(ofSize: 20)
+            } else {
+                
+            }
+            // 3항 연산자
+            //cell.imageView?.image = indexPath.row % 2 == 0 ? UIImage(systemName: "star.fill") : UIImage(systemName: "star")
+            
+            return cell
         }
+    }
         
-        return cell
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 && indexPath.row == 1 {
+            return 100
+        } else {
+            return 40
+        }
     }
     
-    
-    
-
     
 
     
