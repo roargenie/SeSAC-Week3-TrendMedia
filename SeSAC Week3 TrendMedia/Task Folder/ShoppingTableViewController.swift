@@ -147,8 +147,19 @@ class ShoppingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
+            if indexPath.section == 0 {
+                purchaseList.remove(at: indexPath.row)
+                tableView.reloadData()
+            } else if indexPath.section == 1 {
+                haveToButList.remove(at: indexPath.row)
+                tableView.reloadData()
+            } else {
+                soldoutList.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
             
         }
+        
         
     }
     
